@@ -1,0 +1,993 @@
+2022-12-22 10:59:20 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'verification_token' in /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php(1102): yii\db\Command->internalExecute()
+#2 /var/www/html/peref/vendor/yiisoft/yii2/db/Migration.php(376): yii\db\Command->execute()
+#3 /var/www/html/peref/console/migrations/m190124_110200_add_verification_token_column_to_user_table.php(9): yii\db\Migration->addColumn()
+#4 /var/www/html/peref/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(758): m190124_110200_add_verification_token_column_to_user_table->up()
+#5 /var/www/html/peref/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp()
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#7 /var/www/html/peref/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#8 /var/www/html/peref/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 /var/www/html/peref/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#10 /var/www/html/peref/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction()
+#11 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#12 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#13 /var/www/html/peref/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#14 /var/www/html/peref/yii(23): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'verification_token'
+The SQL being executed was: ALTER TABLE `user` ADD `verification_token` varchar(255) NULL DEFAULT NULL in /var/www/html/peref/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException()
+#1 /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php(1102): yii\db\Command->internalExecute()
+#2 /var/www/html/peref/vendor/yiisoft/yii2/db/Migration.php(376): yii\db\Command->execute()
+#3 /var/www/html/peref/console/migrations/m190124_110200_add_verification_token_column_to_user_table.php(9): yii\db\Migration->addColumn()
+#4 /var/www/html/peref/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(758): m190124_110200_add_verification_token_column_to_user_table->up()
+#5 /var/www/html/peref/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp()
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#7 /var/www/html/peref/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#8 /var/www/html/peref/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 /var/www/html/peref/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#10 /var/www/html/peref/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction()
+#11 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#12 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#13 /var/www/html/peref/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#14 /var/www/html/peref/yii(23): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 42S21
+    [1] => 1060
+    [2] => Duplicate column name 'verification_token'
+)
+
+2022-12-22 10:59:16 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'SESSION_MANAGER' => 'local/rodion-Virtual-Machine:@/tmp/.ICE-unix/1526,unix/rodion-Virtual-Machine:/tmp/.ICE-unix/1526'
+    'QT_ACCESSIBILITY' => '1'
+    'COLORTERM' => 'truecolor'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/etc/xdg'
+    'SSH_AGENT_LAUNCHER' => 'gnome-keyring'
+    'XDG_MENU_PREFIX' => 'gnome-'
+    'TERM_PROGRAM_VERSION' => '1.74.2'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'GNOME_SHELL_SESSION_MODE' => 'ubuntu'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'XMODIFIERS' => '@im=ibus'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'BAMF_DESKTOP_FILE_HINT' => '/var/lib/snapd/desktop/applications/code_code.desktop'
+    'NO_AT_BRIDGE' => '1'
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'DBUS_STARTER_BUS_TYPE' => 'session'
+    'PWD' => '/var/www/html/peref'
+    'GSETTINGS_SCHEMA_DIR' => '/snap/code/116/usr/share/glib-2.0/schemas'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'rodion'
+    'XDG_SESSION_TYPE' => 'x11'
+    'GPG_AGENT_INFO' => '/run/user/1000/gnupg/S.gpg-agent:0:1'
+    'SYSTEMD_EXEC_PID' => '1526'
+    'XAUTHORITY' => '/run/user/1000/gdm/Xauthority'
+    'VSCODE_GIT_ASKPASS_NODE' => '/snap/code/116/usr/share/code/code'
+    'WINDOWPATH' => '2'
+    'HOME' => '/home/rodion'
+    'USERNAME' => 'rodion'
+    'LANG' => 'ru_RU.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GIT_ASKPASS' => '/snap/code/116/usr/share/code/resources/app/extensions/git/dist/askpass.sh'
+    'INVOCATION_ID' => '75c1fd83b5ca45a5998a85bc53f0056f'
+    'MANAGERPID' => '1285'
+    'CHROME_DESKTOP' => 'code-url-handler.desktop'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => '--ms-enable-electron-run-as-node'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'rodion'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-deadb6bdf4.sock'
+    'DISPLAY' => ':1'
+    'SHLVL' => '1'
+    'QT_IM_MODULE' => 'ibus'
+    'DBUS_STARTER_ADDRESS' => 'unix:path=/run/user/1000/bus,guid=7e0a2a7bcde1e6114a4a688363a40c37'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/snap/code/116/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'
+    'JOURNAL_STREAM' => '8:24440'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'
+    'GDK_BACKEND' => 'x11'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'
+    'GDMSESSION' => 'ubuntu'
+    'ORIGINAL_XDG_CURRENT_DESKTOP' => 'ubuntu:GNOME'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus,guid=7e0a2a7bcde1e6114a4a688363a40c37'
+    'GIO_LAUNCHED_DESKTOP_FILE_PID' => '3082'
+    'GIO_LAUNCHED_DESKTOP_FILE' => '/var/lib/snapd/desktop/applications/code_code.desktop'
+    'TERM_PROGRAM' => 'vscode'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1671706756.5244
+    'REQUEST_TIME' => 1671706756
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2022-12-22 10:59:44 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'verification_token' in /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php(1102): yii\db\Command->internalExecute()
+#2 /var/www/html/peref/vendor/yiisoft/yii2/db/Migration.php(376): yii\db\Command->execute()
+#3 /var/www/html/peref/console/migrations/m190124_110200_add_verification_token_column_to_user_table.php(9): yii\db\Migration->addColumn()
+#4 /var/www/html/peref/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(758): m190124_110200_add_verification_token_column_to_user_table->up()
+#5 /var/www/html/peref/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp()
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#7 /var/www/html/peref/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#8 /var/www/html/peref/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 /var/www/html/peref/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#10 /var/www/html/peref/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction()
+#11 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#12 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#13 /var/www/html/peref/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#14 /var/www/html/peref/yii(23): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'verification_token'
+The SQL being executed was: ALTER TABLE `user` ADD `verification_token` varchar(255) NULL DEFAULT NULL in /var/www/html/peref/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException()
+#1 /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php(1102): yii\db\Command->internalExecute()
+#2 /var/www/html/peref/vendor/yiisoft/yii2/db/Migration.php(376): yii\db\Command->execute()
+#3 /var/www/html/peref/console/migrations/m190124_110200_add_verification_token_column_to_user_table.php(9): yii\db\Migration->addColumn()
+#4 /var/www/html/peref/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(758): m190124_110200_add_verification_token_column_to_user_table->up()
+#5 /var/www/html/peref/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp()
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#7 /var/www/html/peref/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#8 /var/www/html/peref/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 /var/www/html/peref/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#10 /var/www/html/peref/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction()
+#11 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#12 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#13 /var/www/html/peref/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#14 /var/www/html/peref/yii(23): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 42S21
+    [1] => 1060
+    [2] => Duplicate column name 'verification_token'
+)
+
+2022-12-22 10:59:39 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'SESSION_MANAGER' => 'local/rodion-Virtual-Machine:@/tmp/.ICE-unix/1526,unix/rodion-Virtual-Machine:/tmp/.ICE-unix/1526'
+    'QT_ACCESSIBILITY' => '1'
+    'COLORTERM' => 'truecolor'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/etc/xdg'
+    'SSH_AGENT_LAUNCHER' => 'gnome-keyring'
+    'XDG_MENU_PREFIX' => 'gnome-'
+    'TERM_PROGRAM_VERSION' => '1.74.2'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'GNOME_SHELL_SESSION_MODE' => 'ubuntu'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'XMODIFIERS' => '@im=ibus'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'BAMF_DESKTOP_FILE_HINT' => '/var/lib/snapd/desktop/applications/code_code.desktop'
+    'NO_AT_BRIDGE' => '1'
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'DBUS_STARTER_BUS_TYPE' => 'session'
+    'PWD' => '/var/www/html/peref'
+    'GSETTINGS_SCHEMA_DIR' => '/snap/code/116/usr/share/glib-2.0/schemas'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'rodion'
+    'XDG_SESSION_TYPE' => 'x11'
+    'GPG_AGENT_INFO' => '/run/user/1000/gnupg/S.gpg-agent:0:1'
+    'SYSTEMD_EXEC_PID' => '1526'
+    'XAUTHORITY' => '/run/user/1000/gdm/Xauthority'
+    'VSCODE_GIT_ASKPASS_NODE' => '/snap/code/116/usr/share/code/code'
+    'WINDOWPATH' => '2'
+    'HOME' => '/home/rodion'
+    'USERNAME' => 'rodion'
+    'LANG' => 'ru_RU.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GIT_ASKPASS' => '/snap/code/116/usr/share/code/resources/app/extensions/git/dist/askpass.sh'
+    'INVOCATION_ID' => '75c1fd83b5ca45a5998a85bc53f0056f'
+    'MANAGERPID' => '1285'
+    'CHROME_DESKTOP' => 'code-url-handler.desktop'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => '--ms-enable-electron-run-as-node'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'rodion'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-deadb6bdf4.sock'
+    'DISPLAY' => ':1'
+    'SHLVL' => '1'
+    'QT_IM_MODULE' => 'ibus'
+    'DBUS_STARTER_ADDRESS' => 'unix:path=/run/user/1000/bus,guid=7e0a2a7bcde1e6114a4a688363a40c37'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/snap/code/116/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'
+    'JOURNAL_STREAM' => '8:24440'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'
+    'GDK_BACKEND' => 'x11'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'
+    'GDMSESSION' => 'ubuntu'
+    'ORIGINAL_XDG_CURRENT_DESKTOP' => 'ubuntu:GNOME'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus,guid=7e0a2a7bcde1e6114a4a688363a40c37'
+    'GIO_LAUNCHED_DESKTOP_FILE_PID' => '3082'
+    'GIO_LAUNCHED_DESKTOP_FILE' => '/var/lib/snapd/desktop/applications/code_code.desktop'
+    'TERM_PROGRAM' => 'vscode'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1671706779.6814
+    'REQUEST_TIME' => 1671706779
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2022-12-22 11:00:38 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'verification_token' in /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php(1102): yii\db\Command->internalExecute()
+#2 /var/www/html/peref/vendor/yiisoft/yii2/db/Migration.php(376): yii\db\Command->execute()
+#3 /var/www/html/peref/console/migrations/m190124_110200_add_verification_token_column_to_user_table.php(9): yii\db\Migration->addColumn()
+#4 /var/www/html/peref/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(758): m190124_110200_add_verification_token_column_to_user_table->up()
+#5 /var/www/html/peref/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp()
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#7 /var/www/html/peref/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#8 /var/www/html/peref/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 /var/www/html/peref/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#10 /var/www/html/peref/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction()
+#11 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#12 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#13 /var/www/html/peref/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#14 /var/www/html/peref/yii(23): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'verification_token'
+The SQL being executed was: ALTER TABLE `user` ADD `verification_token` varchar(255) NULL DEFAULT NULL in /var/www/html/peref/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException()
+#1 /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php(1102): yii\db\Command->internalExecute()
+#2 /var/www/html/peref/vendor/yiisoft/yii2/db/Migration.php(376): yii\db\Command->execute()
+#3 /var/www/html/peref/console/migrations/m190124_110200_add_verification_token_column_to_user_table.php(9): yii\db\Migration->addColumn()
+#4 /var/www/html/peref/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(758): m190124_110200_add_verification_token_column_to_user_table->up()
+#5 /var/www/html/peref/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp()
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#7 /var/www/html/peref/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#8 /var/www/html/peref/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 /var/www/html/peref/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#10 /var/www/html/peref/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction()
+#11 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#12 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#13 /var/www/html/peref/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#14 /var/www/html/peref/yii(23): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 42S21
+    [1] => 1060
+    [2] => Duplicate column name 'verification_token'
+)
+
+2022-12-22 11:00:33 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'SESSION_MANAGER' => 'local/rodion-Virtual-Machine:@/tmp/.ICE-unix/1526,unix/rodion-Virtual-Machine:/tmp/.ICE-unix/1526'
+    'QT_ACCESSIBILITY' => '1'
+    'COLORTERM' => 'truecolor'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/etc/xdg'
+    'SSH_AGENT_LAUNCHER' => 'gnome-keyring'
+    'XDG_MENU_PREFIX' => 'gnome-'
+    'TERM_PROGRAM_VERSION' => '1.74.2'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'GNOME_SHELL_SESSION_MODE' => 'ubuntu'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'XMODIFIERS' => '@im=ibus'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'BAMF_DESKTOP_FILE_HINT' => '/var/lib/snapd/desktop/applications/code_code.desktop'
+    'NO_AT_BRIDGE' => '1'
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'DBUS_STARTER_BUS_TYPE' => 'session'
+    'PWD' => '/var/www/html/peref'
+    'GSETTINGS_SCHEMA_DIR' => '/snap/code/116/usr/share/glib-2.0/schemas'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'rodion'
+    'XDG_SESSION_TYPE' => 'x11'
+    'GPG_AGENT_INFO' => '/run/user/1000/gnupg/S.gpg-agent:0:1'
+    'SYSTEMD_EXEC_PID' => '1526'
+    'XAUTHORITY' => '/run/user/1000/gdm/Xauthority'
+    'VSCODE_GIT_ASKPASS_NODE' => '/snap/code/116/usr/share/code/code'
+    'WINDOWPATH' => '2'
+    'HOME' => '/home/rodion'
+    'USERNAME' => 'rodion'
+    'LANG' => 'ru_RU.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GIT_ASKPASS' => '/snap/code/116/usr/share/code/resources/app/extensions/git/dist/askpass.sh'
+    'INVOCATION_ID' => '75c1fd83b5ca45a5998a85bc53f0056f'
+    'MANAGERPID' => '1285'
+    'CHROME_DESKTOP' => 'code-url-handler.desktop'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => '--ms-enable-electron-run-as-node'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'rodion'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-deadb6bdf4.sock'
+    'DISPLAY' => ':1'
+    'SHLVL' => '1'
+    'QT_IM_MODULE' => 'ibus'
+    'DBUS_STARTER_ADDRESS' => 'unix:path=/run/user/1000/bus,guid=7e0a2a7bcde1e6114a4a688363a40c37'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/snap/code/116/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'
+    'JOURNAL_STREAM' => '8:24440'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'
+    'GDK_BACKEND' => 'x11'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'
+    'GDMSESSION' => 'ubuntu'
+    'ORIGINAL_XDG_CURRENT_DESKTOP' => 'ubuntu:GNOME'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus,guid=7e0a2a7bcde1e6114a4a688363a40c37'
+    'GIO_LAUNCHED_DESKTOP_FILE_PID' => '3082'
+    'GIO_LAUNCHED_DESKTOP_FILE' => '/var/lib/snapd/desktop/applications/code_code.desktop'
+    'TERM_PROGRAM' => 'vscode'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1671706833.7052
+    'REQUEST_TIME' => 1671706833
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2023-01-22 15:08:27 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "vendor/bin/codecept". in /var/www/html/peref/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#1 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#2 /var/www/html/peref/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#3 /var/www/html/peref/yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "vendor/bin/codecept". in /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#1 /var/www/html/peref/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#2 /var/www/html/peref/yii(23): yii\base\Application->run()
+#3 {main}
+2023-01-22 15:08:27 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'SESSION_MANAGER' => 'local/rodion-Virtual-Machine:@/tmp/.ICE-unix/1519,unix/rodion-Virtual-Machine:/tmp/.ICE-unix/1519'
+    'QT_ACCESSIBILITY' => '1'
+    'COLORTERM' => 'truecolor'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/etc/xdg'
+    'SSH_AGENT_LAUNCHER' => 'gnome-keyring'
+    'XDG_MENU_PREFIX' => 'gnome-'
+    'TERM_PROGRAM_VERSION' => '1.74.3'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'GNOME_SHELL_SESSION_MODE' => 'ubuntu'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'XMODIFIERS' => '@im=ibus'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'BAMF_DESKTOP_FILE_HINT' => '/var/lib/snapd/desktop/applications/code_code.desktop'
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'PWD' => '/var/www/html/peref'
+    'GSETTINGS_SCHEMA_DIR' => '/snap/code/117/usr/share/glib-2.0/schemas'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'rodion'
+    'XDG_SESSION_TYPE' => 'x11'
+    'GPG_AGENT_INFO' => '/run/user/1000/gnupg/S.gpg-agent:0:1'
+    'SYSTEMD_EXEC_PID' => '1550'
+    'XAUTHORITY' => '/run/user/1000/gdm/Xauthority'
+    'VSCODE_GIT_ASKPASS_NODE' => '/snap/code/117/usr/share/code/code'
+    'GJS_DEBUG_TOPICS' => 'JS ERROR;JS LOG'
+    'WINDOWPATH' => '2'
+    'HOME' => '/home/rodion'
+    'USERNAME' => 'rodion'
+    'LANG' => 'ru_RU.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GIT_ASKPASS' => '/snap/code/117/usr/share/code/resources/app/extensions/git/dist/askpass.sh'
+    'INVOCATION_ID' => 'b2d697f36e8b463cab6278734056ca10'
+    'MANAGERPID' => '1269'
+    'CHROME_DESKTOP' => 'code-url-handler.desktop'
+    'GJS_DEBUG_OUTPUT' => 'stderr'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => '--ms-enable-electron-run-as-node'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'rodion'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-deadb6bdf4.sock'
+    'DISPLAY' => ':1'
+    'SHLVL' => '1'
+    'QT_IM_MODULE' => 'ibus'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/snap/code/117/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'
+    'JOURNAL_STREAM' => '8:24283'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'
+    'GDK_BACKEND' => 'x11'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'
+    'GDMSESSION' => 'ubuntu'
+    'ORIGINAL_XDG_CURRENT_DESKTOP' => 'ubuntu:GNOME'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'GIO_LAUNCHED_DESKTOP_FILE_PID' => '3601'
+    'GIO_LAUNCHED_DESKTOP_FILE' => '/var/lib/snapd/desktop/applications/code_code.desktop'
+    'TERM_PROGRAM' => 'vscode'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1674400107.7862
+    'REQUEST_TIME' => 1674400107
+    'argv' => [
+        0 => 'yii'
+        1 => 'vendor/bin/codecept'
+        2 => 'run'
+        3 => 'unit'
+    ]
+    'argc' => 4
+]
+2023-01-22 15:08:33 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "run". in /var/www/html/peref/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#1 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#2 /var/www/html/peref/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#3 /var/www/html/peref/yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "run". in /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#1 /var/www/html/peref/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#2 /var/www/html/peref/yii(23): yii\base\Application->run()
+#3 {main}
+2023-01-22 15:08:33 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'SESSION_MANAGER' => 'local/rodion-Virtual-Machine:@/tmp/.ICE-unix/1519,unix/rodion-Virtual-Machine:/tmp/.ICE-unix/1519'
+    'QT_ACCESSIBILITY' => '1'
+    'COLORTERM' => 'truecolor'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/etc/xdg'
+    'SSH_AGENT_LAUNCHER' => 'gnome-keyring'
+    'XDG_MENU_PREFIX' => 'gnome-'
+    'TERM_PROGRAM_VERSION' => '1.74.3'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'GNOME_SHELL_SESSION_MODE' => 'ubuntu'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'XMODIFIERS' => '@im=ibus'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'BAMF_DESKTOP_FILE_HINT' => '/var/lib/snapd/desktop/applications/code_code.desktop'
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'PWD' => '/var/www/html/peref'
+    'GSETTINGS_SCHEMA_DIR' => '/snap/code/117/usr/share/glib-2.0/schemas'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'rodion'
+    'XDG_SESSION_TYPE' => 'x11'
+    'GPG_AGENT_INFO' => '/run/user/1000/gnupg/S.gpg-agent:0:1'
+    'SYSTEMD_EXEC_PID' => '1550'
+    'XAUTHORITY' => '/run/user/1000/gdm/Xauthority'
+    'VSCODE_GIT_ASKPASS_NODE' => '/snap/code/117/usr/share/code/code'
+    'GJS_DEBUG_TOPICS' => 'JS ERROR;JS LOG'
+    'WINDOWPATH' => '2'
+    'HOME' => '/home/rodion'
+    'USERNAME' => 'rodion'
+    'LANG' => 'ru_RU.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GIT_ASKPASS' => '/snap/code/117/usr/share/code/resources/app/extensions/git/dist/askpass.sh'
+    'INVOCATION_ID' => 'b2d697f36e8b463cab6278734056ca10'
+    'MANAGERPID' => '1269'
+    'CHROME_DESKTOP' => 'code-url-handler.desktop'
+    'GJS_DEBUG_OUTPUT' => 'stderr'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => '--ms-enable-electron-run-as-node'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'rodion'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-deadb6bdf4.sock'
+    'DISPLAY' => ':1'
+    'SHLVL' => '1'
+    'QT_IM_MODULE' => 'ibus'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/snap/code/117/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'
+    'JOURNAL_STREAM' => '8:24283'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'
+    'GDK_BACKEND' => 'x11'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'
+    'GDMSESSION' => 'ubuntu'
+    'ORIGINAL_XDG_CURRENT_DESKTOP' => 'ubuntu:GNOME'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'GIO_LAUNCHED_DESKTOP_FILE_PID' => '3601'
+    'GIO_LAUNCHED_DESKTOP_FILE' => '/var/lib/snapd/desktop/applications/code_code.desktop'
+    'TERM_PROGRAM' => 'vscode'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1674400113.0686
+    'REQUEST_TIME' => 1674400113
+    'argv' => [
+        0 => 'yii'
+        1 => 'run'
+        2 => 'unit'
+    ]
+    'argc' => 3
+]
+2023-01-22 15:08:50 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "run". in /var/www/html/peref/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#1 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#2 /var/www/html/peref/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#3 /var/www/html/peref/yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "run". in /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#1 /var/www/html/peref/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#2 /var/www/html/peref/yii(23): yii\base\Application->run()
+#3 {main}
+2023-01-22 15:08:50 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'SESSION_MANAGER' => 'local/rodion-Virtual-Machine:@/tmp/.ICE-unix/1519,unix/rodion-Virtual-Machine:/tmp/.ICE-unix/1519'
+    'QT_ACCESSIBILITY' => '1'
+    'COLORTERM' => 'truecolor'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/etc/xdg'
+    'SSH_AGENT_LAUNCHER' => 'gnome-keyring'
+    'XDG_MENU_PREFIX' => 'gnome-'
+    'TERM_PROGRAM_VERSION' => '1.74.3'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'GNOME_SHELL_SESSION_MODE' => 'ubuntu'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'XMODIFIERS' => '@im=ibus'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'BAMF_DESKTOP_FILE_HINT' => '/var/lib/snapd/desktop/applications/code_code.desktop'
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'PWD' => '/var/www/html/peref'
+    'GSETTINGS_SCHEMA_DIR' => '/snap/code/117/usr/share/glib-2.0/schemas'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'rodion'
+    'XDG_SESSION_TYPE' => 'x11'
+    'GPG_AGENT_INFO' => '/run/user/1000/gnupg/S.gpg-agent:0:1'
+    'SYSTEMD_EXEC_PID' => '1550'
+    'XAUTHORITY' => '/run/user/1000/gdm/Xauthority'
+    'VSCODE_GIT_ASKPASS_NODE' => '/snap/code/117/usr/share/code/code'
+    'GJS_DEBUG_TOPICS' => 'JS ERROR;JS LOG'
+    'WINDOWPATH' => '2'
+    'HOME' => '/home/rodion'
+    'USERNAME' => 'rodion'
+    'LANG' => 'ru_RU.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GIT_ASKPASS' => '/snap/code/117/usr/share/code/resources/app/extensions/git/dist/askpass.sh'
+    'INVOCATION_ID' => 'b2d697f36e8b463cab6278734056ca10'
+    'MANAGERPID' => '1269'
+    'CHROME_DESKTOP' => 'code-url-handler.desktop'
+    'GJS_DEBUG_OUTPUT' => 'stderr'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => '--ms-enable-electron-run-as-node'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'rodion'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-deadb6bdf4.sock'
+    'DISPLAY' => ':1'
+    'SHLVL' => '1'
+    'QT_IM_MODULE' => 'ibus'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/snap/code/117/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'
+    'JOURNAL_STREAM' => '8:24283'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'
+    'GDK_BACKEND' => 'x11'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'
+    'GDMSESSION' => 'ubuntu'
+    'ORIGINAL_XDG_CURRENT_DESKTOP' => 'ubuntu:GNOME'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'GIO_LAUNCHED_DESKTOP_FILE_PID' => '3601'
+    'GIO_LAUNCHED_DESKTOP_FILE' => '/var/lib/snapd/desktop/applications/code_code.desktop'
+    'TERM_PROGRAM' => 'vscode'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1674400130.3061
+    'REQUEST_TIME' => 1674400130
+    'argv' => [
+        0 => 'yii'
+        1 => 'run'
+        2 => 'unit'
+    ]
+    'argc' => 3
+]
+2023-01-22 15:12:11 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "codecept". in /var/www/html/peref/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#1 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#2 /var/www/html/peref/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#3 /var/www/html/peref/yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "codecept". in /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#1 /var/www/html/peref/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#2 /var/www/html/peref/yii(23): yii\base\Application->run()
+#3 {main}
+2023-01-22 15:12:11 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'SESSION_MANAGER' => 'local/rodion-Virtual-Machine:@/tmp/.ICE-unix/1519,unix/rodion-Virtual-Machine:/tmp/.ICE-unix/1519'
+    'QT_ACCESSIBILITY' => '1'
+    'COLORTERM' => 'truecolor'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/etc/xdg'
+    'SSH_AGENT_LAUNCHER' => 'gnome-keyring'
+    'XDG_MENU_PREFIX' => 'gnome-'
+    'TERM_PROGRAM_VERSION' => '1.74.3'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'GNOME_SHELL_SESSION_MODE' => 'ubuntu'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'XMODIFIERS' => '@im=ibus'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'BAMF_DESKTOP_FILE_HINT' => '/var/lib/snapd/desktop/applications/code_code.desktop'
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'PWD' => '/var/www/html/peref'
+    'GSETTINGS_SCHEMA_DIR' => '/snap/code/117/usr/share/glib-2.0/schemas'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'rodion'
+    'XDG_SESSION_TYPE' => 'x11'
+    'GPG_AGENT_INFO' => '/run/user/1000/gnupg/S.gpg-agent:0:1'
+    'SYSTEMD_EXEC_PID' => '1550'
+    'XAUTHORITY' => '/run/user/1000/gdm/Xauthority'
+    'VSCODE_GIT_ASKPASS_NODE' => '/snap/code/117/usr/share/code/code'
+    'GJS_DEBUG_TOPICS' => 'JS ERROR;JS LOG'
+    'WINDOWPATH' => '2'
+    'HOME' => '/home/rodion'
+    'USERNAME' => 'rodion'
+    'LANG' => 'ru_RU.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GIT_ASKPASS' => '/snap/code/117/usr/share/code/resources/app/extensions/git/dist/askpass.sh'
+    'INVOCATION_ID' => 'b2d697f36e8b463cab6278734056ca10'
+    'MANAGERPID' => '1269'
+    'CHROME_DESKTOP' => 'code-url-handler.desktop'
+    'GJS_DEBUG_OUTPUT' => 'stderr'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => '--ms-enable-electron-run-as-node'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'rodion'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-deadb6bdf4.sock'
+    'DISPLAY' => ':1'
+    'SHLVL' => '1'
+    'QT_IM_MODULE' => 'ibus'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/snap/code/117/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'
+    'JOURNAL_STREAM' => '8:24283'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'
+    'GDK_BACKEND' => 'x11'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'
+    'GDMSESSION' => 'ubuntu'
+    'ORIGINAL_XDG_CURRENT_DESKTOP' => 'ubuntu:GNOME'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'GIO_LAUNCHED_DESKTOP_FILE_PID' => '3601'
+    'GIO_LAUNCHED_DESKTOP_FILE' => '/var/lib/snapd/desktop/applications/code_code.desktop'
+    'TERM_PROGRAM' => 'vscode'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1674400331.1226
+    'REQUEST_TIME' => 1674400331
+    'argv' => [
+        0 => 'yii'
+        1 => 'codecept'
+        2 => 'run'
+        3 => 'unit'
+    ]
+    'argc' => 4
+]
+2023-01-22 15:12:17 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "run". in /var/www/html/peref/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#1 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#2 /var/www/html/peref/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#3 /var/www/html/peref/yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "run". in /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#1 /var/www/html/peref/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#2 /var/www/html/peref/yii(23): yii\base\Application->run()
+#3 {main}
+2023-01-22 15:12:17 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'SESSION_MANAGER' => 'local/rodion-Virtual-Machine:@/tmp/.ICE-unix/1519,unix/rodion-Virtual-Machine:/tmp/.ICE-unix/1519'
+    'QT_ACCESSIBILITY' => '1'
+    'COLORTERM' => 'truecolor'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/etc/xdg'
+    'SSH_AGENT_LAUNCHER' => 'gnome-keyring'
+    'XDG_MENU_PREFIX' => 'gnome-'
+    'TERM_PROGRAM_VERSION' => '1.74.3'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'GNOME_SHELL_SESSION_MODE' => 'ubuntu'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'XMODIFIERS' => '@im=ibus'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'BAMF_DESKTOP_FILE_HINT' => '/var/lib/snapd/desktop/applications/code_code.desktop'
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'PWD' => '/var/www/html/peref'
+    'GSETTINGS_SCHEMA_DIR' => '/snap/code/117/usr/share/glib-2.0/schemas'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'rodion'
+    'XDG_SESSION_TYPE' => 'x11'
+    'GPG_AGENT_INFO' => '/run/user/1000/gnupg/S.gpg-agent:0:1'
+    'SYSTEMD_EXEC_PID' => '1550'
+    'XAUTHORITY' => '/run/user/1000/gdm/Xauthority'
+    'VSCODE_GIT_ASKPASS_NODE' => '/snap/code/117/usr/share/code/code'
+    'GJS_DEBUG_TOPICS' => 'JS ERROR;JS LOG'
+    'WINDOWPATH' => '2'
+    'HOME' => '/home/rodion'
+    'USERNAME' => 'rodion'
+    'LANG' => 'ru_RU.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GIT_ASKPASS' => '/snap/code/117/usr/share/code/resources/app/extensions/git/dist/askpass.sh'
+    'INVOCATION_ID' => 'b2d697f36e8b463cab6278734056ca10'
+    'MANAGERPID' => '1269'
+    'CHROME_DESKTOP' => 'code-url-handler.desktop'
+    'GJS_DEBUG_OUTPUT' => 'stderr'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => '--ms-enable-electron-run-as-node'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'rodion'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-deadb6bdf4.sock'
+    'DISPLAY' => ':1'
+    'SHLVL' => '1'
+    'QT_IM_MODULE' => 'ibus'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/snap/code/117/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'
+    'JOURNAL_STREAM' => '8:24283'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'
+    'GDK_BACKEND' => 'x11'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'
+    'GDMSESSION' => 'ubuntu'
+    'ORIGINAL_XDG_CURRENT_DESKTOP' => 'ubuntu:GNOME'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'GIO_LAUNCHED_DESKTOP_FILE_PID' => '3601'
+    'GIO_LAUNCHED_DESKTOP_FILE' => '/var/lib/snapd/desktop/applications/code_code.desktop'
+    'TERM_PROGRAM' => 'vscode'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1674400337.5241
+    'REQUEST_TIME' => 1674400337
+    'argv' => [
+        0 => 'yii'
+        1 => 'run'
+        2 => 'unit'
+    ]
+    'argc' => 3
+]
+2023-01-24 01:49:16 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'verification_token' in /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php(1102): yii\db\Command->internalExecute()
+#2 /var/www/html/peref/vendor/yiisoft/yii2/db/Migration.php(376): yii\db\Command->execute()
+#3 /var/www/html/peref/console/migrations/m190124_110200_add_verification_token_column_to_user_table.php(9): yii\db\Migration->addColumn()
+#4 /var/www/html/peref/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(758): m190124_110200_add_verification_token_column_to_user_table->up()
+#5 /var/www/html/peref/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp()
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#7 /var/www/html/peref/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#8 /var/www/html/peref/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 /var/www/html/peref/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#10 /var/www/html/peref/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction()
+#11 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#12 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#13 /var/www/html/peref/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#14 /var/www/html/peref/yii_test(27): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'verification_token'
+The SQL being executed was: ALTER TABLE `user` ADD `verification_token` varchar(255) NULL DEFAULT NULL in /var/www/html/peref/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException()
+#1 /var/www/html/peref/vendor/yiisoft/yii2/db/Command.php(1102): yii\db\Command->internalExecute()
+#2 /var/www/html/peref/vendor/yiisoft/yii2/db/Migration.php(376): yii\db\Command->execute()
+#3 /var/www/html/peref/console/migrations/m190124_110200_add_verification_token_column_to_user_table.php(9): yii\db\Migration->addColumn()
+#4 /var/www/html/peref/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(758): m190124_110200_add_verification_token_column_to_user_table->up()
+#5 /var/www/html/peref/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp()
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#7 /var/www/html/peref/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#8 /var/www/html/peref/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 /var/www/html/peref/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#10 /var/www/html/peref/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction()
+#11 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#12 /var/www/html/peref/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#13 /var/www/html/peref/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#14 /var/www/html/peref/yii_test(27): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 42S21
+    [1] => 1060
+    [2] => Duplicate column name 'verification_token'
+)
+
+2023-01-24 01:49:06 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'SHELL' => '/bin/bash'
+    'SESSION_MANAGER' => 'local/rodion-Virtual-Machine:@/tmp/.ICE-unix/1499,unix/rodion-Virtual-Machine:/tmp/.ICE-unix/1499'
+    'QT_ACCESSIBILITY' => '1'
+    'COLORTERM' => 'truecolor'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/etc/xdg'
+    'SSH_AGENT_LAUNCHER' => 'gnome-keyring'
+    'XDG_MENU_PREFIX' => 'gnome-'
+    'TERM_PROGRAM_VERSION' => '1.74.3'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'GNOME_SHELL_SESSION_MODE' => 'ubuntu'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'XMODIFIERS' => '@im=ibus'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'BAMF_DESKTOP_FILE_HINT' => '/var/lib/snapd/desktop/applications/code_code.desktop'
+    'GTK_MODULES' => 'gail:atk-bridge'
+    'PWD' => '/var/www/html/peref'
+    'GSETTINGS_SCHEMA_DIR' => '/snap/code/117/usr/share/glib-2.0/schemas'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'rodion'
+    'XDG_SESSION_TYPE' => 'x11'
+    'GPG_AGENT_INFO' => '/run/user/1000/gnupg/S.gpg-agent:0:1'
+    'SYSTEMD_EXEC_PID' => '1533'
+    'XAUTHORITY' => '/run/user/1000/gdm/Xauthority'
+    'VSCODE_GIT_ASKPASS_NODE' => '/snap/code/117/usr/share/code/code'
+    'GJS_DEBUG_TOPICS' => 'JS ERROR;JS LOG'
+    'WINDOWPATH' => '2'
+    'HOME' => '/home/rodion'
+    'USERNAME' => 'rodion'
+    'LANG' => 'ru_RU.UTF-8'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GIT_ASKPASS' => '/snap/code/117/usr/share/code/resources/app/extensions/git/dist/askpass.sh'
+    'INVOCATION_ID' => 'b07abe96c11444a99142dc252031981e'
+    'MANAGERPID' => '1257'
+    'CHROME_DESKTOP' => 'code-url-handler.desktop'
+    'GJS_DEBUG_OUTPUT' => 'stderr'
+    'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => '--ms-enable-electron-run-as-node'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XDG_SESSION_CLASS' => 'user'
+    'TERM' => 'xterm-256color'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'USER' => 'rodion'
+    'VSCODE_GIT_IPC_HANDLE' => '/run/user/1000/vscode-git-deadb6bdf4.sock'
+    'DISPLAY' => ':1'
+    'SHLVL' => '1'
+    'QT_IM_MODULE' => 'ibus'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/snap/code/117/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'
+    'JOURNAL_STREAM' => '8:24647'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'
+    'GDK_BACKEND' => 'x11'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'
+    'GDMSESSION' => 'ubuntu'
+    'ORIGINAL_XDG_CURRENT_DESKTOP' => 'ubuntu:GNOME'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'GIO_LAUNCHED_DESKTOP_FILE_PID' => '3781'
+    'GIO_LAUNCHED_DESKTOP_FILE' => '/var/lib/snapd/desktop/applications/code_code.desktop'
+    'TERM_PROGRAM' => 'vscode'
+    '_' => './yii_test'
+    'PHP_SELF' => './yii_test'
+    'SCRIPT_NAME' => './yii_test'
+    'SCRIPT_FILENAME' => './yii_test'
+    'PATH_TRANSLATED' => './yii_test'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1674524946.7359
+    'REQUEST_TIME' => 1674524946
+    'argv' => [
+        0 => './yii_test'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
